@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--XML schema 是w3c标准， 比DTD强大很多， 也是用来控制xml 语义约束的-->
+<!-- namespace 表明当前的所有元素节点定义来自某个地址， 还可以使用xmlns:xs 来指定进一步的命名空间，即来自此处的元素应该使用前缀xs -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+    <xs:element name="hr">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" maxOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="age">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="18"/>
+                                        <xs:maxInclusive value="60"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="salary" type="xs:integer" />
+                            <xs:element name="department">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dname" type="xs:string" />
+                                        <xs:element name="address" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="no" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

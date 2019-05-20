@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lesson>
+    <content>
+        <![CDATA[
+                此处由CDATA包裹，不由xml解析，而是原意输出
+                <body>
+                    <a href='#'>这是一个html超链接</a>
+                </body>
+            ]]>
+    </content>
+</lesson>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--使用DTD规定xml格式, SYSTEM 表明指定本地文件 -->
+<!--<!DOCTYPE hr SYSTEM "hr.dtd">--><!--人力资源管理系统-->
+<!-- 使用xml schema 管理xml格式 --><!-- xmlns = xml namespace xsi= xml schema instance -->
+<!-- 首先指定一个固定的当前使用的xml的元素的来源， 如果没有，则将xsi中提供的定义作为后备, 在实际使用中, 就是使用xsi地址中的 -->
+<hr xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hr.xsd">
+    <employee no="3309">
+        <name>张三</name>
+        <age>31</age>
+        <salary>4000</salary>
+        <department>
+            <dname>会计部</dname>
+            <address>XX大厦-B103</address>
+        </department>
+    </employee>
+    <employee no="3310">
+        <name>李四</name>
+        <age>32</age>
+        <salary>3900</salary>
+        <department>
+            <dname>财务部</dname>
+            <address>XX大厦-B104</address>
+        </department>
+    </employee>
+    <employee no="3310">
+        <name>王五&lt;'特殊人才'&gt;</name>
+        <age>32</age>
+        <salary>3900</salary>
+        <department>
+            <dname>财务部"特殊部门"</dname>
+            <address>XX大厦-B104&amp;B403</address>
+        </department>
+    </employee>
+    <employee no="3330">
+        <name>李铁柱</name>
+        <age>28</age>
+        <salary>4000</salary>
+        <department>
+            <dname>人事部</dname>
+            <address>XX大厦-B601</address>
+        </department>
+    </employee>
+</hr>

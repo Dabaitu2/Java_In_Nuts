@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 一个hr下可以拥有0-n个employee -->
+<!ELEMENT hr (employee*)>
+<!-- 一个employee 下只能有一个name, age... -->
+<!ELEMENT employee (name, age, salary, department)>
+<!-- 每个子节点只能是文本 -->
+<!ELEMENT name (#PCDATA)>
+<!--使用ATTLIST 指定属性-->
+        <!ATTLIST employee no CDATA "0">
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT department (dname, address)>
+<!ELEMENT dname (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
